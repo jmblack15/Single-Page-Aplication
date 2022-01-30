@@ -13,7 +13,7 @@ module.exports = {
     //Creamos el lugar dónde se exportará el proyecto.
     path: path.resolve(__dirname, 'dist'),
     //Este es el nombre del archivo final para producción.
-    fileName: 'main.js'
+    filename: 'main.js'
   },
   //configurar extensiones que se utilizaran en el proyecto
   resolve: {
@@ -22,9 +22,9 @@ module.exports = {
   },
   //Se crea un modulo con las reglas necesarias que vamos a utilizar.
   module: {
-     //Reglas
+    //Reglas
     rules: [
-       // Estructura de Babel
+      // Estructura de Babel
       {
         //Nos permite identificar los archivos según se encuentran en nuestro entorno.
         test: /\.js?$/,
@@ -33,6 +33,11 @@ module.exports = {
         //Utilizar un loader como configuración establecida.
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: "defaults" }]
+            ]
+          }
         }
       }
     ]

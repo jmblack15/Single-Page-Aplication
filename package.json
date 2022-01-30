@@ -2,15 +2,25 @@
   "name": "single-page-aplication",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "webpack --mode production",
+    "start": "webpack-dev-server --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmblack15/Single-Page-Aplication.git"
   },
   "keywords": [],
   "author": "Jose Manuel Osorio",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmblack15/Single-Page-Aplication/issues"
+  },
+  "homepage": "https://github.com/jmblack15/Single-Page-Aplication#readme",
   "devDependencies": {
     "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.67.0",
