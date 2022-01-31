@@ -45,7 +45,7 @@ module.exports = {
   //establecer plugins que se utilizaran
   plugins: [
     //Permite trabajar con los archivos HTML
-    new HtmlWebpackPlugin([
+    new HtmlWebpackPlugin(
       {
         //Cómo vamos a inyectar un valor a un archivo HTML.
         inject: true,
@@ -54,6 +54,6 @@ module.exports = {
         //El nombre que tendrá el archivo
         filename: './index.html',
       }
-    ])
+    ),
   ]
 }
