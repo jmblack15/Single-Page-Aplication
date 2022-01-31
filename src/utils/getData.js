@@ -7,7 +7,7 @@ const getData = async (id) => {
     const data = await response.json();
     return data;
   } catch (error){
-    console.log('FETCH ERRO', error);
+    console.log('FETCH ERROR', error);
   };
 };
 
